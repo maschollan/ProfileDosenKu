@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/purple_500">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="16dp"
+        android:foregroundGravity="center_horizontal"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="4dp"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_detail_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        tools:text="Nama Dosen" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_below="@id/tv_detail_name"
+        app:cardCornerRadius="50dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <View
+                android:id="@+id/hr_detail_top"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#888888"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/detail_nip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:layout_alignTop="@id/hr_detail_top"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="NIP" />
+
+            <View
+                android:id="@+id/hr_detail_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#888888"
+                android:layout_below="@id/detail_nip"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_detail_nip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginVertical="8dp"
+                android:layout_alignTop="@id/hr_detail_bottom"
+                android:textAlignment="center"
+                android:ellipsize="end"
+                android:maxLines="5"
+                tools:text="NIP" />
+
+            <View
+                android:id="@+id/hr_detail_top1"
+                android:layout_width="match_parent"
+                android:layout_below="@id/tv_detail_nip"
+                android:layout_height="2dp"
+                android:background="#888888"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/detail_keahlian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:layout_alignTop="@id/hr_detail_top1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Keahlian Dosen" />
+
+            <View
+                android:id="@+id/hr_detail_bottom1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#888888"
+                android:layout_below="@id/detail_keahlian"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_detail_keahlian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@id/hr_detail_bottom1"
+                android:textAlignment="center"
+                android:ellipsize="end"
+                android:maxLines="5"
+                tools:text="Keahlian Dosen" />
+
+            <Button
+                android:id="@+id/btn_kembali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Kembali"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
